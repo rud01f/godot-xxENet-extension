@@ -24,6 +24,8 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
   ObjectTypeDB::bind_method(_MD("disconnect_peer:int", "peer_id"), &NetworkedMultiplayerENet::disconnect_peer);
   ObjectTypeDB::bind_method(_MD("get_peer_address:Dictionary", "peer_id"), &NetworkedMultiplayerENet::get_peer_address);
   
+::
+
   // in the main scope (outside any method/function):
   
   int NetworkedMultiplayerENet::disconnect_peer(int peer_id) {
