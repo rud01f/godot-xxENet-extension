@@ -42,6 +42,8 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
   ObjectTypeDB::bind_method(_MD("disconnect_peer:int", "peer_id"), &NetworkedMultiplayerENet::disconnect_peer);
   ObjectTypeDB::bind_method(_MD("get_peer_address:Dictionary", "peer_id"), &NetworkedMultiplayerENet::get_peer_address);
   
+::
+
   // in the main scope (outside any method/function):
   
   int NetworkedMultiplayerENet::disconnect_peer(int peer_id) {
@@ -107,6 +109,8 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
   
   ObjectTypeDB::bind_method(_MD("disconnect_network_peer:int", "peer_id"), &SceneTree::disconnect_network_peer);
   ObjectTypeDB::bind_method(_MD("get_network_peer_address:Dictionary", "peer_id"), &SceneTree::get_network_peer_address);
+
+::
 
   // in the main scope (outside any method/function):
   
