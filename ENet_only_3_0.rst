@@ -23,7 +23,9 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
   
   ClassDB::bind_method(D_METHOD("disconnect_peer:int", "peer_id"), &NetworkedMultiplayerENet::disconnect_peer);
   ClassDB::bind_method(D_METHOD("get_peer_address:Dictionary", "peer_id"), &NetworkedMultiplayerENet::get_peer_address);
-  
+
+::
+
   // in the main scope (outside any method/function):
   
   int NetworkedMultiplayerENet::disconnect_peer(int peer_id) {
@@ -72,4 +74,4 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
     return ret;
   }
 
-** end of modifications**
+**end of modifications**
