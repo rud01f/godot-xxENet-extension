@@ -4,7 +4,7 @@ Extension of Godot Engine 3.0 xxENet multiplayer support.
 **Remainder: be aware that provided modification is written by unexperienced C++ programmer, therefore applying them may make Godot Engine unstable or lead to memory leaks. Please consult with experienced C++ programmer, preferably someone with basic knowledge about Godot Engine.**
 
 Below is a list of file paths and instructions - "groot" (no pun intended) refers to Godot Engine source code root directory.
-This modification will add functions to NetworkedMultiplayerENet and SceneTree.
+**This modification will add functions to NetworkedMultiplayerENet and SceneTree.**
 
 * ``groot/core/io/networked_multiplayer_peer.h``
 
