@@ -4,12 +4,13 @@ Extension of Godot Engine 2.2 xxENet multiplayer support.
 **Remainder: be aware that provided modification is written by unexperienced C++ programmer, therefore applying them may make Godot Engine unstable or lead to memory leaks. Please consult with experienced C++ programmer, preferably someone with basic knowledge about Godot Engine.**
 
 Below is a list of file paths and instructions - "groot" (no pun intended) refers to Godot Engine source code root directory.
+This modification will add functions to NetworkedMultiplayerENet and SceneTree.
 
 * ``groot/core/io/networked_multiplayer_peer.h``
 
 ::
 
-  // after "public:" keyword of NetworkMultiplayerPeer class:
+  // after "public:" keyword of NetworkedMultiplayerPeer class:
   
   virtual int disconnect_peer(int peer_id)=0;
   virtual Dictionary get_peer_address(int peer_id)=0;
@@ -18,7 +19,7 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
 
 ::
 
-  // inside "NetworkMultiplayerPeer::_bind_methods()" method:
+  // inside "NetworkedMultiplayerPeer::_bind_methods()" method:
   
   ObjectTypeDB::bind_method(_MD("disconnect_peer:int", "peer_id"), &NetworkedMultiplayerPeer::disconnect_peer);
   ObjectTypeDB::bind_method(_MD("get_peer_address:Dictionary", "peer_id"), &NetworkedMultiplayerPeer::get_peer_address);
@@ -27,7 +28,7 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
 
 ::
 
-  // after "public:" keyword of NetworkMultiplayerENet class:
+  // after "public:" keyword of NetworkedMultiplayerENet class:
 
   virtual int disconnect_peer(int peer_id);
   virtual Dictionary get_peer_address(int peer_id);
@@ -36,7 +37,7 @@ Below is a list of file paths and instructions - "groot" (no pun intended) refer
 
 ::
 
-  // inside "NetworkMultiplayerPeer::_bind_methods()" method:
+  // inside "NetworkedMultiplayerPeer::_bind_methods()" method:
   
   ObjectTypeDB::bind_method(_MD("disconnect_peer:int", "peer_id"), &NetworkedMultiplayerENet::disconnect_peer);
   ObjectTypeDB::bind_method(_MD("get_peer_address:Dictionary", "peer_id"), &NetworkedMultiplayerENet::get_peer_address);
